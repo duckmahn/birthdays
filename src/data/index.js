@@ -2,16 +2,17 @@ import {
   algorithms,
   devnotes,
   oscs,
+  phuyen
 } from "../assets";
 
 export const navLinks = [
   {
     id: "hero",
-    title: "Hero",
+    title: "Main",
   },
   {
     id: "portfolio",
-    title: "Portfolio",
+    title: "What next?",
   },
   {
     id: "experience",
@@ -68,23 +69,12 @@ const experiences = [
 
 const portfolio = [
   {
-    name: "Open Source Computer Science Repo",
+    name: "What happen next?",
     description:
-      "A GitHub repo with over 17,000 stars containing a curated list of free online courses from reputable universities that satisfy undergraduate computer science requirements.",
-    image: oscs,
+      "It could be a bit disappointing to see because i have planned for month before you seeing this. But i hope you will like it.",
+    image: phuyen,
   },
-  {
-    name: "Dev Notes",
-    description:
-      "A newsletter with over 6,000 readers made for software developers to keep up with this rapidly evolving industry, with a sister platform in progress.",
-    image: devnotes,
-  },
-  {
-    name: "Visually Understanding Algorithms",
-    description:
-      "A showcase of animated algorithms coded using TypeScript, with the video garnering over 400,000 views.",
-    image: algorithms,
-  },
+
 ];
 
 export { experiences, portfolio };
