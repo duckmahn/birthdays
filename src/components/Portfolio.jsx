@@ -8,7 +8,7 @@ import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
 import { MouseTracker } from "./MouseTracker";
 import { useState } from "react";
-const ProjectCard = ({ index, name, description, image }) => {
+const ProjectCard = ({ index, name, description, image, linkUrl }) => {
   const controls = useAnimation();
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -44,16 +44,14 @@ const ProjectCard = ({ index, name, description, image }) => {
       <div className="relative w-full md:w-3/5">
         <button
           onClick={() => {
-            window.open(
-              "https://www.canva.com/design/DAGMN8NbYRs/bbGgOczqtvxPBqXUBVZ_ag/edit",
-              "_blank"
-            );
+            window.open(linkUrl, "_blank");
+            console.log("🚀 ~ ProjectCard ~ linkUrl:", linkUrl);
           }}
         >
           <img
             src={image}
             alt="project_image"
-            className="w-full h-auto object-cover md:rounded-3xl blur-md hover:blur-none transition-all duration-500"
+            className="w-full max-h-[1000px] h-auto object-cover md:rounded-3xl blur-md hover:blur-none transition-all duration-500"
             onMouseEnter={() => setTarget("picture")}
             onMouseLeave={() => setTarget(null)}
           />
